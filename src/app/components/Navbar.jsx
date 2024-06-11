@@ -4,18 +4,19 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
 
 const navLinks = [
   {
-    title: "About",
+    title: "درباره",
     path: "#about",
   },
   {
-    title: "Projects",
+    title: "پروژه ها",
     path: "#projects",
   },
   {
-    title: "Contact",
+    title: "تماس",
     path: "#contact",
   },
 ];
@@ -30,7 +31,13 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
+            <Image
+              src="/images/fullstack-development.png"
+              alt="my image"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 p-1 right-4 rounded-full "
+              width={50}
+              height={50}
+            />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -50,7 +57,7 @@ const Navbar = () => {
           )}
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 gap-3">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink href={link.path} title={link.title} />

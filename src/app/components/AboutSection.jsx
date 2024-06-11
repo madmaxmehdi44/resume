@@ -5,26 +5,31 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
+    title: "توانایی های من",
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>TypeScript</li>
         <li>Node.js</li>
-        <li>Express</li>
+        <li>Reactjs</li>
+        <li>Nextjs</li>
+        <li>TTailwindCSS</li>
         <li>PostgreSQL</li>
+        <li>Redis</li>
+        <li>MySQL</li>
+        <li>MSSQL</li>
         <li>Sequelize</li>
         <li>JavaScript</li>
-        <li>React</li>
       </ul>
     ),
   },
   {
-    title: "Education",
+    title: "آموزش",
     id: "education",
     content: (
       <ul className="list-disc pl-2">
         <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>University of Shiraz,Iran</li>
       </ul>
     ),
   },
@@ -51,18 +56,18 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-white" id="about" dir="ltr">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src="/images/about-image.png" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+        <div className="mt-4 md:mt-0  flex flex-col h-full text-justify"  dir="rtl">
+          <h2 className="text-4xl font-bold text-white mb-4">درباره من</h2>
+          <p className="text-base lg:text-lg ">
+          من یک توسعه دهنده Full-Stack حرفه ای برنامه های وب تعاملی هستم
+  . من تجربه ی
+ کار با JavaScript ، React ، Redux ، Node.js ، Express ، PostgreSQL ،
+ Sequelize ، HTML ، CSS و GIT ,... را دارم. من در یادگیری سریع هستم و همیشه
+ به دنبال گسترش دانش و مهارت خود هستم. من یک بازیکن تیم هستم و
+ من از کار با دیگران برای ایجاد برنامه های شگفت انگیز هیجان زده ام.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -70,21 +75,21 @@ const AboutSection = () => {
               active={tab === "skills"}
             >
               {" "}
-              Skills{" "}
+              توانایی ها{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
               {" "}
-              Education{" "}
+              آموزش{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
               {" "}
-              Certifications{" "}
+              مقام ها{" "}
             </TabButton>
           </div>
           <div className="mt-8">

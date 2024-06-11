@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.FROM_EMAIL;
+const resend = new Resend("re_2xxSoqdD_QAdo2DPbZLGYdLv7XeAScAqD");
+// const fromEmail = process.env.FROM_EMAIL;
+const fromEmail = '<onboarding@resend.dev>';
 
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
@@ -12,14 +13,14 @@ export async function POST(req, res) {
       from: fromEmail,
       to: [fromEmail, email],
       subject: subject,
-      react: (
-        <>
-          <h1>{subject}</h1>
-          <p>Thank you for contacting us!</p>
-          <p>New message submitted:</p>
-          <p>{message}</p>
-        </>
-      ),
+      react:  <div>
+      <h1>{subject}</h1>
+            <p>از اینکه با ما تماس گرفتید متشکریم!</p>
+   <p>پیام جدید ارسال شد:</p>
+            <p>{message}</p>
+    </div>,
+        
+      
     });
     return NextResponse.json(data);
   } catch (error) {
