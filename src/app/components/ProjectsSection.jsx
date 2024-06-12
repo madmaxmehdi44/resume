@@ -82,22 +82,22 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        پروژه های من
-      </h2>
+        پــروژه هـا      </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
-          name="همه"
+          name="All"
           isSelected={tag === "All"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="وب سایت"
+          name="Web"
           isSelected={tag === "Web"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="طراحی UI/UX"
+          name="Mobile"
+          // name="طراحی UI/UX"
           isSelected={tag === "Mobile"}
         />
       </div>

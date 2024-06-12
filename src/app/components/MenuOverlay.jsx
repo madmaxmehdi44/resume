@@ -7,6 +7,7 @@ const MenuOverlay = ({ links }) => {
       {links.map((link, index) => (
         <li key={index}>
           <NavLink href={link.path} title={link.title} />
+
         </li>
       ))}
     </ul>

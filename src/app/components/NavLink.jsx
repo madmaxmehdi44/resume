@@ -1,12 +1,16 @@
 import Link from "next/link";
 
-const NavLink = ({ href, title }) => {
+const NavLink = ({ href, title, icon }) => {
   return (
-    <Link
+    <Link 
       href={href}
-      className="block  text-[#ADB7BE] sm:text-xl rounded  hover:text-lime-400"
+      className="flex flex-col  text-[#ADB7BE] sm:text-xl rounded  hover:text-lime-400"
     >
-      {title}
+      <div className="flex flex-row gap-1 justify-center text-lg">
+
+      {icon}
+      {title} 
+      </div>
     </Link>
   );
 };
