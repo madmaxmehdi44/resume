@@ -20,6 +20,7 @@ const TAB_DATA = [
         <li>MSSQL</li>
         <li>Sequelize</li>
         <li>JavaScript</li>
+        <li>Python</li>
       </ul>
     ),
   },
